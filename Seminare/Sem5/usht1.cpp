@@ -151,7 +151,7 @@ void library_loop(Book library[], int &library_size)
       }
       else
       {
-        std::cout << "Sorry, make sure you entered the correct id.\n";
+        std::cout << "Sorry, make sure you entered the correct ID.\n";
       }
     }
     else if (choice == 5)
