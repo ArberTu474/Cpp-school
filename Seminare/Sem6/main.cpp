@@ -142,13 +142,14 @@ public:
 
   Days after(int days_after)
   {
-    return week[(day + days_after) % 7];
+    return week[(this->day + days_after) % 7];
   }
 };
 
 int main()
 {
   dayType day1(Tue);
+  day1.set_day(Fri);
 
   day1.print_day(day1.after(13));
 
