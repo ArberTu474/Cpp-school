@@ -82,23 +82,26 @@ public:
     std::cout << "Cerriages:\t " << this->train_carriages << "\n";
   }
 
-  bool operator>(Train &other)
-  {
-    if (this->get_speed() > other.get_speed())
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
-  }
+  friend bool operator>(Train &a, Train &other);
 };
+bool operator>(Train &a, Train &other)
+{
+  if (a.get_speed() > other.get_speed())
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
 
 int main()
 {
   Vehicle vehicle_int(120, 27);
   vehicle_int.print();
+
+  Vehicle<double> makin(2.4, 50);
 
   Train train1(300, 500, 5);
   Train train2(200, 200, 5);

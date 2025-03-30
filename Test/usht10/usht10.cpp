@@ -83,7 +83,7 @@ public:
   }
 };
 
-bool is_shop(ClothesShop shop, std::vector<ClothesShop> list)
+bool is_shop(ClothesShop shop, std::vector<ClothesShop> &list)
 {
   for (int i = 0; i < list.size(); i++)
   {
